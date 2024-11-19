@@ -72,7 +72,7 @@ app.delete("/customers/:id", (req, res) => {
   })
 })
 
-app.use("/", (req, res) => {
+app.use("/", (res) => {
   res.send("Server is running...");
 })
 
