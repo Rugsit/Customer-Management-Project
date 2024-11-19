@@ -10,7 +10,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   host: '172.26.240.1',
   user: 'root',
-  password: '', // default XAMPP password
+  password: '', 
   database: 'company',
 });
 
@@ -72,8 +72,11 @@ app.delete("/customers/:id", (req, res) => {
   })
 })
 
-const port = process.env.PORT || 3000
+app.use("/", (res) => {
+  res.send("Server is running...");
+})
 
+const port = process.env.PORT || 3000
 
 app.listen(port, () => {
   console.log("Server is running on port 3000");
