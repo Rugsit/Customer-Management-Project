@@ -8,8 +8,16 @@
   ],
   "routes": [
     {
+      "src": "/customers/(?<id>[^/]+)",
+      "dest": "./index.cjs"
+    },
+    {
+      "src": "/customers",
+      "dest": "./index.cjs"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "./index.cjs"
     }
   ]
 }
